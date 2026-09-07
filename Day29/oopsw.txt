@@ -1,0 +1,335 @@
+What is OOPs?
+
+OOPs = Object-Oriented Programming System (more commonly called Object-Oriented Programming, OOP).
+
+It is a programming approach where we organize a program around objects and classes rather than mainly around functions and procedures.
+
+Simple example
+
+Think about a Car:
+
+Properties (data): color, model, speed
+Behaviors (functions): start(), stop(), accelerate()
+
+In OOP, we combine these data and behaviors into an object.
+
+Why do we need OOP?
+
+OOP is useful because it makes large programs easier to develop, understand, maintain, and reuse.
+
+Main reasons:
+Code reusability – Existing classes can be reused.
+Modularity – A large program can be divided into smaller classes/objects.
+Security – Data can be protected using encapsulation.
+Easy maintenance – Changes in one class generally have less impact on other parts.
+Scalability – OOP is suitable for large and complex applications.
+Real-world modeling – Real-world entities such as Student, Bank Account, Car, Employee etc. can be represented as objects.
+What is a Class?
+
+A class is a blueprint/template for creating objects.
+
+It defines:
+
+Data → attributes/properties
+Functions → methods/behaviors
+Example
+class Student {
+    String name;
+    int age;
+
+    void study() {
+        System.out.println("Student is studying");
+    }
+}
+
+Here, Student is a class.
+
+We can create objects from it:
+
+Student s1 = new Student();
+Student s2 = new Student();
+
+Here:
+
+Student → class
+s1, s2 → objects
+Easy analogy
+
+Class = Blueprint of a house
+Object = Actual house built using that blueprint
+
+One class can be used to create many objects.
+
+Features of OOP
+
+The major features/principles of OOP are:
+
+1. Encapsulation
+
+Wrapping data and methods together into a single unit (class).
+
+It also allows us to control access to data.
+
+Example:
+
+class BankAccount {
+    private double balance;
+
+    void deposit(double amount) {
+        balance += amount;
+    }
+}
+
+Here, balance is protected from direct access.
+
+2. Abstraction
+
+Showing only the essential details and hiding unnecessary implementation details.
+
+Example:
+
+When you use an ATM, you know how to withdraw money, but you don't need to know the internal banking operations.
+
+3. Inheritance
+
+One class can acquire the properties and methods of another class.
+
+Example:
+
+Animal
+   ↓
+ Dog
+
+Dog can inherit properties and behaviors from Animal.
+
+Benefit: Code reusability.
+
+4. Polymorphism
+
+One interface/name can have multiple forms or behaviors.
+
+Example:
+
+Animal → sound()
+
+Dog     → Bark
+Cat     → Meow
+
+The same sound() method behaves differently depending on the object.
+
+Other important OOP features
+Class
+Object
+Dynamic binding
+Message passing
+Modularity
+Reusability
+For exams/interviews, remember the four pillars:
+
+Encapsulation + Abstraction + Inheritance + Polymorphism = Four Pillars of OOP
+
+One-line summary
+
+OOP is a programming paradigm that organizes data and behavior into objects, using classes as blueprints, to achieve reusability, security, modularity, and maintainability.
+
+give examples of instagram, linked in, youtube
+
+Sure. Think of Instagram, LinkedIn, and YouTube as real-world examples of how OOP concepts are used.
+
+1. Instagram 📸
+
+Imagine Instagram has a User class:
+
+Class: User
+
+Properties:
+- username
+- email
+- followers
+- following
+- posts
+
+Methods:
+- uploadPost()
+- likePost()
+- followUser()
+- sendMessage()
+
+When you create an account:
+
+User u1 = new User("Srinu")
+User u2 = new User("Rahul")
+
+Here:
+
+User → Class
+u1, u2 → Objects
+OOP concepts in Instagram
+
+Encapsulation:
+User's private information such as password is protected inside the User object.
+
+Inheritance:
+
+User
+ ↓
+Creator
+ ↓
+VerifiedCreator
+
+A Creator can inherit features from User and have additional features like analytics.
+
+Polymorphism:
+
+Notification
+    ↓
+ ┌───────────────┐
+LikeNotification
+CommentNotification
+FollowNotification
+
+All are notifications, but they behave differently.
+
+2. LinkedIn 
+
+LinkedIn could have classes such as:
+
+Class: User
+
+Properties:
+- name
+- skills
+- experience
+- connections
+
+Methods:
+- connect()
+- applyJob()
+- sendMessage()
+- addSkill()
+
+For example:
+
+User u1 = new User("Srinu")
+User u2 = new User("Rahul")
+
+Again:
+
+Class → User
+Objects → Srinu, Rahul
+
+Inheritance
+
+LinkedIn could conceptually have:
+
+User
+ ↓
+ ├── JobSeeker
+ ├── Recruiter
+ └── CompanyAdmin
+
+All are users but have different functionality.
+
+For example:
+
+JobSeeker → applyJob()
+Recruiter  → postJob()
+CompanyAdmin → manageCompanyPage()
+
+This demonstrates inheritance + polymorphism.
+
+3. YouTube ▶️
+
+YouTube could have:
+
+Class: Video
+
+Properties:
+- title
+- duration
+- views
+- likes
+
+Methods:
+- play()
+- pause()
+- like()
+- share()
+
+An actual video becomes an object:
+
+Video v1 = new Video("OOP Tutorial")
+Video v2 = new Video("UPSC Preparation")
+
+Here:
+
+Video → Class
+v1, v2 → Objects
+Inheritance
+
+You could have:
+
+Content
+   ↓
+ Video
+   ↓
+ ├── Short
+ ├── LiveStream
+ └── RegularVideo
+
+Each type can have different behavior.
+
+For example:
+
+RegularVideo → play()
+LiveStream   → startLive()
+Short        → playShort()
+
+That's polymorphism.
+
+🔥 See all three together
+
+A social-media application can be thought of like this:
+
+                OOP APPLICATION
+                      │
+        ┌─────────────┼─────────────┐
+        ↓             ↓             ↓
+    Instagram      LinkedIn       YouTube
+        │             │             │
+      User          User          User
+      Post          Job           Video
+     Message       Company       Comment
+      Story        Skill         Channel
+
+Each of these can be represented using classes and objects.
+
+Most important idea
+
+Instead of writing one huge program:
+
+Instagram = thousands/millions of functions
+
+OOP lets developers organize the system into manageable entities:
+
+User
+Post
+Comment
+Message
+Video
+Job
+Company
+Notification
+Payment
+...
+
+Each class contains its own data + functions, making a huge application much easier to build and maintain.
+
+Simple way to remember:
+
+Class = Design/Blueprint
+Object = Actual thing
+Encapsulation = Protect data
+Inheritance = Reuse properties
+Polymorphism = Same operation, different behavior
+Abstraction = Hide unnecessary details
